@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .project {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+        }
+        img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <h1 style="text-align: center;">Welcome to the general information Blog</h1>
+    <h2 style="text-align: center;">Click on Blog to access the posts</h2>
+    <div>
+    </div>
+{% for project in projects %}
+    <div>
+        <h2>{{ project.title }}</h2>
+        <p>{{ project.description }}</p>
+        <img src="{{ project.image.url }}" alt="{{ project.title }}" class="img-fluid centered" />
+        {% if project.url %}
+            <a href="{{ project.url }}" target="_blank">View Project</a>
+        {% endif %}
+    </div>
+{% endfor %}
+    </div>
+</body>
+</html>
+{% endblock %}

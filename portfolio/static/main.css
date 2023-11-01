@@ -1,0 +1,27 @@
+body {
+    background: #090909;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-image: url('/portfolio/images/ImagenBlog.jpg');
+    background-size: cover;
+    margin-top: 40px /* Agrega margen superior para evitar que el contenido esté muy cerca del borde superior */
+}
+
+img {
+    border: 0;
+}
+img.centered {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+.navbar {
+    width: 100%; /* El navbar ocupa el 100% del ancho de la ventana */
+    z-index: 1000; /*Navbar en la parte superior de otros elementos */
+}
+
+.navbar {
+    height: 50px; /* Altura del navbar */
+}

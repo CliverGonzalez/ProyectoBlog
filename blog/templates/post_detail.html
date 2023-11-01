@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <h1>Post Detail</h1>
+
+    <h2>Title: {{ post.title }}</h2>
+    <p>Description: {{ post.description|safe }}</p>
+    <img src="{{ post.image.url }}" alt="{{ post.title }}">
+    
+    {% if post.url %}
+    <p><a href="{{ post.url }}" target="_blank">Visit the Website</a></p>
+    {% endif %}
+</body>
+</html>
+{% endblock %}
